@@ -23,12 +23,15 @@ import { HttpClientModule } from "@angular/common/http";
 import { HttpModule } from "@angular/http";
 
 import { IsLoggedIn } from './isLogged.guard';
+import { MathComponent } from './math/math.component';
+import { NavComponent } from './nav/nav.component';
 
 let appRoute: Routes = [
   {path: '', component: HomeComponent},
   {path: 'reg', component: RegComponent},
   {path: 'auth', component: AuthComponent},
-  {path: 'dashboard', component: DashboardComponent, canActivate: [IsLoggedIn]}
+  {path: 'dashboard', component: DashboardComponent, canActivate: [IsLoggedIn]},
+  {path: 'math', component: MathComponent}
 ];
 
 
@@ -41,7 +44,9 @@ let appRoute: Routes = [
     AuthComponent,
     DashboardComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    MathComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

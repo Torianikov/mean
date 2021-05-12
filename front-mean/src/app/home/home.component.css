@@ -1,0 +1,9 @@
+img{
+  height: 100%;
+  width: 100%;
+  background-position: center top;
+  box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}

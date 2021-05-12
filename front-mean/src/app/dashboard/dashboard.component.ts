@@ -17,6 +17,16 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // dataUser(){
+  //   return localStorage.setItem('name', this.authService.user.name)
+
+  // }
+  // name = this.authService.user.name;
+  // localStoage.setItem('name', name);
+  // email = this.authService.user.email;
+  // login = this.authService.user.login;
+  // localStorage.setItem('token', token);
+
   logoutUser(){
     this.authService.logout(); //выход с учетной записи
     this.flashMessage.show('Вы вышли с учетной записи', {

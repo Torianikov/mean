@@ -1,0 +1,22 @@
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 20% auto  15%;
+  grid-template-areas:
+    "h h h h h h h h h h h h"
+    "n n m m m m m m m m . ."
+    "f f f f f f f f f f f f";
+}
+app-header{
+  grid-area: h;
+}
+.container{
+  grid-area: m;
+}
+app-footer{
+  grid-area: f;
+}
+app-nav{
+  grid-area: n;
+}
+

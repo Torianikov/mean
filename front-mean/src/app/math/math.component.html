@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Математика</h1>
+  <div class="number"  id = 'first_number'>{{first_number}}</div>
+  <div class="number" id = 'symbol'>{{symbol}}</div>
+  <div class="number" id = 'second_number' >{{second_number}}</div>
+  <input type="number" class="number" id = "result" [(ngModel)] = 'clear' #result>
+   <button *ngIf = 'active; else otvet' class="btn btn-outline-success" id="search" (click) = 'search()'>Знайти</button>
+  <ng-template #otvet>
+    <button id="answer" class="btn btn-outline-success"  (click) = 'answer(result.value)'>Ответ</button>
+  </ng-template>
+
+</div>
+
+
