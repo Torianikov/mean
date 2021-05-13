@@ -1,0 +1,9 @@
+<h1>Українська мова</h1>
+<div class="container" #container>
+   <button *ngIf = 'active; else otvet' class="btn btn-outline-success" id="search" (click) = 'search()'>Знайти</button>
+  <ng-template #otvet>
+    <button id="answer" class="btn btn-outline-success"  (click) = 'answer()'>Ответ</button>
+  </ng-template>
+
+
+</div>

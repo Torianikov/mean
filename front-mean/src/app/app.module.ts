@@ -25,13 +25,15 @@ import { HttpModule } from "@angular/http";
 import { IsLoggedIn } from './isLogged.guard';
 import { MathComponent } from './math/math.component';
 import { NavComponent } from './nav/nav.component';
+import { UkrComponent } from './ukr/ukr.component';
 
 let appRoute: Routes = [
   {path: '', component: HomeComponent},
   {path: 'reg', component: RegComponent},
   {path: 'auth', component: AuthComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate: [IsLoggedIn]},
-  {path: 'math', component: MathComponent}
+  {path: 'math', component: MathComponent},
+  {path: 'ukr', component: UkrComponent}
 ];
 
 
@@ -46,7 +48,8 @@ let appRoute: Routes = [
     HomeComponent,
     FooterComponent,
     MathComponent,
-    NavComponent
+    NavComponent,
+    UkrComponent
   ],
   imports: [
     BrowserModule,
