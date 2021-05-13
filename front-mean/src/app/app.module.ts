@@ -26,6 +26,7 @@ import { IsLoggedIn } from './isLogged.guard';
 import { MathComponent } from './math/math.component';
 import { NavComponent } from './nav/nav.component';
 import { UkrComponent } from './ukr/ukr.component';
+import { EngComponent } from './eng/eng.component';
 
 let appRoute: Routes = [
   {path: '', component: HomeComponent},
@@ -33,7 +34,8 @@ let appRoute: Routes = [
   {path: 'auth', component: AuthComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate: [IsLoggedIn]},
   {path: 'math', component: MathComponent},
-  {path: 'ukr', component: UkrComponent}
+  {path: 'ukr', component: UkrComponent},
+  {path: 'eng', component: EngComponent}
 ];
 
 
@@ -49,7 +51,8 @@ let appRoute: Routes = [
     FooterComponent,
     MathComponent,
     NavComponent,
-    UkrComponent
+    UkrComponent,
+    EngComponent
   ],
   imports: [
     BrowserModule,
