@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
 
   logoutUser(){
     this.authService.logout(); //выход с учетной записи
-    this.flashMessage.show('Вы вышли с учетной записи', {
+    this.flashMessage.show('Ви вийшли з облікового запису', {
       cssClass: 'alert-warning',
       timeout: 4000,
     });

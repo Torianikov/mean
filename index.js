@@ -9,7 +9,7 @@ let account = require('./routes/account'); //файл с отслеживаен�
 
 let app = express();
 
-let port = 3000;
+let port = process.env.PORT || 8080;
 
 app.use(passport.initialize()); //инициализируем библиотеку
 app.use(passport.session()); //инициализируем сесии
@@ -40,6 +40,9 @@ app.get('/', (req,res) => {
 
 app.use('/account', account); // когда переходим по url адресу который начинаеться на account вызываеться файл account
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+});
 app.listen(port, () =>{ 
     console.log("Сервер был запущен по порту " + port); //запуск сервара по порту 
 });

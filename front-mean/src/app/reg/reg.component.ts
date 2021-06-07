@@ -32,14 +32,14 @@ export class RegComponent implements OnInit {
       password: this.password
     };
     if(!this.checkForm.checkName(user.name)){
-      this.flashMessage.show('Имя пользовтеля не введено', {
+      this.flashMessage.show("Ім`я користувача не введено", {
       cssClass: 'alert-danger',
       timeout: 4000,
     });
 
       return false; // чтобЫ не было перезагрузки страницы
     } else if(!this.checkForm.checkLogin(user.login)){
-      this.flashMessage.show('Логин не введено', {
+      this.flashMessage.show('Логін не введено', {
         cssClass: 'alert-danger',
         timeout: 4000,
       });

@@ -17,7 +17,7 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json')// какой тип данных будет отправляться
     return this.http.post(//отправляем данные
-      'http://localhost:3000/account/reg',// куда передаем
+      'account/reg',// куда передаем
       user, // что передаем
       {headers: headers}).pipe(map((res: any) => res.json()));// map отвечает за то что у нас будет json формат передаваться
   }
@@ -26,7 +26,7 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json')// какой тип данных будет отправляться
     return this.http.post(//отправляем данные
-      'http://localhost:3000/account/auth',// куда передаем
+      'account/auth',// куда передаем
       user, // что передаем
       {headers: headers}).pipe(map((res: any) => res.json()));// map отвечает за то что у нас будет json формат передаваться
 

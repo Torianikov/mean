@@ -26,7 +26,7 @@ export class AuthComponent implements OnInit {
       password: this.password
     };
     if(user.password == undefined){// если зарагестрированный юсер не ввел парол
-      this.flashMessage.show('Введите пароль', {
+      this.flashMessage.show('Введіть пароль', {
         cssClass: 'alert-danger',
         timeout: 4000,
       });
@@ -40,7 +40,7 @@ export class AuthComponent implements OnInit {
           timeout: 4000,
         });
     } else{
-      this.flashMessage.show("Вы успешно авторизовались", { // если успешно
+      this.flashMessage.show("Ви успішно авторизувалися", { // если успешно
         cssClass: 'alert-success',
         timeout: 4000,
         });
